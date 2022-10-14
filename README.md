@@ -160,37 +160,6 @@ To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
 
-## Bundle 2
-### Exercice 1
-```bash
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/bundle-2
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add services.html
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "adding service page "
-[ft/bundle-2 8b6dd56] adding service page
- 1 file changed, 12 insertions(+)
- create mode 100644 services.html
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
-fatal: The current branch ft/bundle-2 has no upstream branch.
-To push the current branch and set the remote as upstream, use
-    git push --set-upstream origin ft/bundle-2
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/bundle-2
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 487 bytes | 243.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
-remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
-remote:
-To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
- * [new branch]      ft/bundle-2 -> ft/bundle-2
-branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
-```
-
 ## Exercice 2
 ```bash
 PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout main
@@ -305,5 +274,254 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
    a8b080f..d0a8849  ft/service-redesign -> ft/service-redesign
 PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> 
+```
+## bundle 3
+### Exercice 1
+```bash
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/team-page
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add team.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: adding team.html"
+[ft/team-page 12d94c8] feat: adding team.html
+ 1 file changed, 17 insertions(+)
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 560 bytes | 186.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git log
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:06:13 2022 +0200
+
+    feat: adding team.html
+
+commit be22b82ddcc6c4770f9fef95013d4d4daa97165f (origin/main, main, ft/contact-page)
+Merge: 03f7a29 015ec63
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Thu Oct 13 17:40:18 2022 +0200
+
+    feat:adding readme file
+
+commit 03f7a2994151c9590f4b251379b68993a9ab4485
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git cherry-pick 12d94c8bb50881685ec57a992536dc2dec2f6732
+If you wish to commit it anyway, use:
+
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+
+nothing to commit, working tree clean
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+warning: cancelling a cherry picking in progress
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git cherry-pick 12d94c8bb50881685ec57a992536dc2dec2f6732
+[ft/contact-page 80ed126] feat: adding team.html
+ Date: Fri Oct 14 08:06:13 2022 +0200
+ create mode 100644 team.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add team.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: add changes to team.html"
+[ft/contact-page c162fe4] feat: add changes to team.html
+ 1 file changed, 2 insertions(+)
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 817 bytes | 204.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/faq-page
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add faq.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: adding faq.html page"
+[ft/faq-page 4f8c5bf] feat: adding faq.html page
+ 1 file changed, 13 insertions(+)
+ create mode 100644 faq.html
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 576 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git log
+commit 4f8c5bf291ff392ba8bc9169ca56f087f1b2144e (HEAD -> ft/faq-page, origin/ft/faq-page)
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:20:16 2022 +0200
+
+    feat: adding faq.html page
+
+commit c162fe4d4edf98ab46b408fadbf0079cf8d0c339 (origin/ft/contact-page, ft/contact-page)
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:15:03 2022 +0200
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:20:16 2022 +0200
+
+    feat: adding faq.html page
+
+commit c162fe4d4edf98ab46b408fadbf0079cf8d0c339 (origin/ft/contact-page, ft/contact-page)
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:15:03 2022 +0200
+
+commit 80ed1260f8c28b5ef72f5a88d8faaa04f59ff977
+Author: Ngabonziza Nestor <ngabonest@gmail.com>
+Date:   Fri Oct 14 08:06:13 2022 +0200
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git revert 4f8c5bf291ff392ba8bc9169ca56f087f1b2144e
+[ft/faq-page 21ec078] Revert "feat: adding faq.html page"
+ 1 file changed, 13 deletions(-)
+ delete mode 100644 faq.html
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 265 bytes | 132.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+   4f8c5bf..21ec078  ft/faq-page -> ft/faq-page
+ 
+
+```
+### Exercice 2
+```bash
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git switch ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git branch -D ft/home-page-redesign
+Deleted branch ft/home-page-redesign (was 04915f3).
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add .   
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "feat: making some changes on home page"
+[main 12c0f92] feat: making some changes on home page
+feat: adding faq.html page
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 482 bytes | 241.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+   ceb4d95..12c0f92  main -> main
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git rebase main
+error: could not apply 4f8c5bf... feat: adding faq.html page
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 4f8c5bf... feat: adding faq.html page
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git rebase --continue
+[detached HEAD 5eb80b5] feat: adding faq.html page
+ 1 file changed, 2 insertions(+)
+CONFLICT (modify/delete): faq.html deleted in 21ec078 (Revert "feat: adding faq.html page") and modified in HEAD.  Version HEAD of faq.html left in treeerror: could not apply 21ec078... Revert "feat: adding faq.html page"
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 21ec078... Revert "feat: adding faq.html page"
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git rebase --continue
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git add .
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git commit -m "add some changes on home page"
+[ft/home-page-redesign c960616] add some changes on home page
+ 1 file changed, 1 insertion(+)
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.32 KiB | 269.00 KiB/s, done.
+Total 12 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/NNesta/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/NNesta/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+PS C:\Users\TheGym\Desktop\tutorial-projects\Gym-Git-Exercise-Solutions> 
+
 ```
 
